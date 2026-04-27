@@ -1,0 +1,23 @@
+function abrirModal(titulo, desc, rating, horas, imagem) {
+
+  document.getElementById("modal-title").innerText = titulo;
+  document.getElementById("modal-desc").innerText = desc;
+  document.getElementById("modal-rating").innerText = rating;
+  document.getElementById("modal-hours").innerText = horas;
+  document.getElementById("modal-img").src = imagem;
+
+  document.getElementById("modal").classList.add("active");
+}
+
+function fecharModal() {
+  document.getElementById("modal").classList.remove("active");
+}
+
+/* FECHAR CLICANDO FORA */
+window.onclick = function(event) {
+  const modal = document.getElementById("modal");
+
+  if (event.target === modal) {
+    fecharModal();
+  }
+}
