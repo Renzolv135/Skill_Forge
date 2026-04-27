@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Aluno - Detalhes</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+  <link rel="stylesheet" href="css/ad-deta.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="logo">⚡ SkillForge Admin</div>
+
+  <div class="nav-links">
+    <a href="admin-dashboard.html">Dashboard</a>
+    <a href="admin-alunos.html">Alunos</a>
+    <a href="./admin-cursos.html">Cursos</a>
+    <a href="./admin-certificados.html">Certificados</a>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1>Detalhes do Aluno</h1>
+    <p>Acompanhe o desempenho completo</p>
+  </div>
+
+  <!-- PERFIL -->
+  <div class="admin-student-hero">
+
+    <div class="left">
+      <img src="https://via.placeholder.com/80">
+
+      <div>
+        <h2>Renan Silva</h2>
+        <p>2SIT • Sistemas para Internet</p>
+      </div>
+    </div>
+
+    <div class="right">
+      <div>
+        <span>Pontos</span>
+        <h3>8700</h3>
+      </div>
+
+      <div>
+        <span>Ranking</span>
+        <h3>#5</h3>
+      </div>
+
+      <div>
+        <span>Cursos</span>
+        <h3>3/4</h3>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- PROGRESSO -->
+  <div class="admin-progress">
+
+    <div class="progress-header">
+      <span>Progresso geral</span>
+      <strong>75%</strong>
+    </div>
+
+    <div class="progress-bar big">
+      <div class="progress-fill" style="width:75%"></div>
+    </div>
+
+  </div>
+
+  <!-- TABS -->
+  <div class="tabs">
+    <div class="tab active" onclick="trocarTab(event,'cursos')">Cursos</div>
+    <div class="tab" onclick="trocarTab(event,'certificados')">Certificados</div>
+  </div>
+
+  <!-- CURSOS -->
+  <div id="cursos" class="tab-content fade-in">
+
+    <div class="admin-course">
+
+      <div class="left">
+        <img src="https://via.placeholder.com/60">
+
+        <div>
+          <h3>Lógica de Programação</h3>
+          <p>Curso concluído</p>
+
+          <div class="mini-bar">
+            <div class="mini-fill" style="width:100%"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="right">
+        <span class="badge validado">✔ Validado</span>
+        <span class="points">+1200 pts</span>
+      </div>
+
+    </div>
+
+    <div class="admin-course">
+
+      <div class="left">
+        <img src="https://via.placeholder.com/60">
+
+        <div>
+          <h3>JavaScript</h3>
+          <p>Em andamento</p>
+
+          <div class="mini-bar">
+            <div class="mini-fill" style="width:60%"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="right">
+        <span class="badge andamento">Em andamento</span>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- CERTIFICADOS -->
+  <div id="certificados" class="tab-content hidden">
+
+    <div class="admin-cert">
+
+      <div>
+        <h3>HTML e CSS</h3>
+        <p>Enviado em 2024</p>
+      </div>
+
+      <div class="cert-actions">
+        <span class="badge validado">✔ Validado</span>
+        <button class="btn">Ver</button>
+      </div>
+
+    </div>
+
+    <div class="admin-cert">
+
+      <div>
+        <h3>JavaScript</h3>
+        <p>Aguardando validação</p>
+      </div>
+
+      <div class="cert-actions">
+        <span class="badge pendente">⏳ Pendente</span>
+        <button class="btn">Validar</button>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

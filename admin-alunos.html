@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Alunos - SkillForge</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+  <link rel="stylesheet" href="css/ad-al.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="logo">⚡ SkillForge Admin</div>
+
+  <div class="nav-links">
+    <a href="admin-dashboard.html">Dashboard</a>
+    <a class="active">Alunos</a>
+    <a href="./admin-cursos.html">Cursos</a>
+    <a href="./admin-certificados.html">Certificados</a>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1>Gestão de Alunos</h1>
+    <p>Acompanhe o desempenho dos alunos</p>
+  </div>
+
+  <!-- FILTROS AVANÇADOS -->
+  <div class="admin-filters advanced">
+
+    <!-- BUSCA -->
+    <input type="text" placeholder="🔍 Buscar aluno...">
+
+    <!-- CURSO -->
+    <select>
+      <option value="">Curso (todos)</option>
+      <option>SIT</option>
+      <option>SAT</option>
+      <option>SRT</option>
+    </select>
+
+    <!-- TURMA COMPLETA -->
+    <select>
+      <option value="">Turma</option>
+      <option>1SIT</option>
+      <option>2SIT</option>
+      <option>3SIT</option>
+
+      <option>1SAT</option>
+      <option>2SAT</option>
+      <option>3SAT</option>
+
+      <option>1SRT</option>
+      <option>2SRT</option>
+    </select>
+
+    <!-- ANO -->
+    <select>
+      <option value="">Ano</option>
+      <option>2023</option>
+      <option>2024</option>
+      <option>2025</option>
+    </select>
+
+    <!-- STATUS -->
+    <select>
+      <option value="">Status</option>
+      <option>Ativo</option>
+      <option>Concluído</option>
+      <option>Inativo</option>
+    </select>
+
+    <!-- BOTÕES -->
+    <button class="btn">Filtrar</button>
+    <button class="btn ghost">Limpar</button>
+
+  </div>
+
+  <!-- TABELA -->
+  <div class="admin-table">
+
+    <!-- HEADER -->
+    <div class="table-header">
+      <span>Aluno</span>
+      <span>Turma</span>
+      <span>Cursos</span>
+      <span>Progresso</span>
+      <span>Pontos</span>
+      <span></span>
+    </div>
+
+    <!-- ITEM -->
+    <div class="table-row">
+
+      <div class="student">
+        <img src="https://via.placeholder.com/40">
+        <span>Renan Silva</span>
+      </div>
+
+      <span>2SIT</span>
+
+      <span>3/4</span>
+
+      <div class="progress-bar small">
+        <div class="progress-fill" style="width:75%"></div>
+      </div>
+
+      <span class="points">8700</span>
+
+      <a href="admin-aluno-detalhe.html">
+        <button class="btn">Ver</button>
+      </a>
+
+    </div>
+
+    <!-- ITEM -->
+    <div class="table-row">
+
+      <div class="student">
+        <img src="https://via.placeholder.com/40">
+        <span>João Pedro</span>
+      </div>
+
+      <span>1SAT</span>
+
+      <span>2/4</span>
+
+      <div class="progress-bar small">
+        <div class="progress-fill" style="width:50%"></div>
+      </div>
+
+      <span class="points">5400</span>
+
+      <button class="btn">Ver</button>
+
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>

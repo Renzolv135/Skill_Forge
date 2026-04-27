@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - SkillForge</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body class="login-body">
+
+<div class="login-container">
+
+  <!-- LOGO -->
+  <div class="login-logo">⚡ SkillForge</div>
+
+  <!-- BOX -->
+  <div class="login-box">
+
+    <h2>Entrar na plataforma</h2>
+    <p class="login-sub">Escolha o tipo de conta</p>
+
+    <!-- SELECT TIPO -->
+    <div class="account-type">
+      <button class="type-btn active" onclick="selectType('aluno', this)">
+        👨‍🎓 Aluno
+      </button>
+
+      <button class="type-btn" onclick="selectType('admin', this)">
+        🛠️ Admin
+      </button>
+    </div>
+
+    <!-- INPUTS -->
+    <input type="email" placeholder="Seu email">
+    <input type="password" placeholder="Sua senha">
+
+    <!-- BOTÃO -->
+    <button class="login-btn" onclick="login()">Entrar</button>
+
+  </div>
+
+</div>
+
+<script  src="js/login.js"></script>
+</body>
+</html>

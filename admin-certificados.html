@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Certificados - Admin</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+  <link rel="stylesheet" href="css/ad-cert.css">
+</head>
+
+<body>
+
+<div class="navbar">
+  <div class="logo">⚡ SkillForge Admin</div>
+
+  <div class="nav-links">
+    <a href="admin-dashboard.html">Dashboard</a>
+    <a href="admin-alunos.html">Alunos</a>
+    <a href="admin-cursos.html">Cursos</a>
+    <a class="active">Certificados</a>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="header">
+    <h1>Validação de Certificados</h1>
+    <p>Aprove ou recuse certificados enviados</p>
+  </div>
+
+  <!-- FILTRO -->
+  <div class="admin-filters">
+    <input type="text" placeholder="Buscar aluno ou curso...">
+
+    <select>
+      <option>Todos</option>
+      <option>Pendentes</option>
+      <option>Aprovados</option>
+      <option>Recusados</option>
+    </select>
+  </div>
+
+  <!-- LISTA -->
+  <div class="cert-grid">
+
+    <!-- ITEM -->
+    <div class="cert-card">
+
+      <div class="top">
+        <div>
+          <h3>Lógica de Programação</h3>
+          <p>Renan Silva • 2SIT</p>
+        </div>
+
+        <span class="badge pendente">⏳ Pendente</span>
+      </div>
+
+      <div class="cert-preview">
+        📄 Certificado enviado (PDF/Imagem)
+      </div>
+
+      <div class="actions">
+        <button class="btn approve" onclick="aprovarCert(this)">Aprovar</button>
+<button class="btn danger" onclick="recusarCert(this)">Recusar</button>
+        <button class="btn">Ver</button>
+      </div>
+
+    </div>
+
+    <!-- ITEM -->
+    <div class="cert-card">
+
+      <div class="top">
+        <div>
+          <h3>HTML e CSS</h3>
+          <p>João Pedro • 1SAT</p>
+        </div>
+
+        <span class="badge validado">✔ Aprovado</span>
+      </div>
+
+      <div class="cert-preview">
+        📄 Certificado validado
+      </div>
+
+      <div class="actions">
+        <button class="btn approve" onclick="aprovarCert(this)">Aprovar</button>
+<button class="btn danger" onclick="recusarCert(this)">Recusar</button>
+        <button class="btn">Ver</button>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

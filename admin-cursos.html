@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Cursos - Admin</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+  <link rel="stylesheet" href="css/ad-curso.css">
+</head>
+
+<body>
+
+<div class="navbar">
+  <div class="logo">⚡ SkillForge Admin</div>
+
+  <div class="nav-links">
+    <a href="admin-dashboard.html">Dashboard</a>
+    <a href="admin-alunos.html">Alunos</a>
+    <a class="active">Cursos</a>
+    <a href="./admin-certificados.html">Certificados</a>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="header">
+    <h1>Gestão de Cursos</h1>
+    <p>Crie e gerencie os cursos</p>
+  </div>
+
+  <!-- TABS -->
+  <div class="tabs">
+    <div class="tab active" onclick="trocarTab(event,'criar')">Criar Curso</div>
+    <div class="tab" onclick="trocarTab(event,'lista')">Cursos Disponíveis</div>
+  </div>
+
+  <!-- ================= CRIAR ================= -->
+  <div id="criar" class="tab-content fade-in">
+
+    <div class="form-curso">
+
+      <h2>Novo Curso</h2>
+
+      <div class="form-grid">
+        <input type="text" placeholder="Nome do curso">
+        <input type="number" placeholder="Horas">
+      </div>
+
+      <textarea placeholder="Descrição do curso"></textarea>
+
+      <div class="form-grid">
+        <input type="text" placeholder="Link do curso">
+        <input type="text" placeholder="URL da imagem">
+      </div>
+
+      <!-- CURSO BASE -->
+      <div class="turmas-box">
+        <h4>Curso (Eixo)</h4>
+
+        <div class="turmas-grid">
+          <label><input type="checkbox"> SIT</label>
+          <label><input type="checkbox"> SAT</label>
+          <label><input type="checkbox"> SRT</label>
+          <label><input type="checkbox"> SPT</label>
+        </div>
+      </div>
+
+      <!-- TURMAS ESPECÍFICAS -->
+      <div class="turmas-box">
+        <h4>Turmas específicas</h4>
+
+        <label><input type="checkbox"> Todas</label>
+
+        <div class="turmas-grid">
+          <label><input type="checkbox"> 1SIT</label>
+          <label><input type="checkbox"> 2SIT</label>
+          <label><input type="checkbox"> 3SIT</label>
+
+          <label><input type="checkbox"> 1SAT</label>
+          <label><input type="checkbox"> 2SAT</label>
+          <label><input type="checkbox"> 3SAT</label>
+
+          <label><input type="checkbox"> 1SRT</label>
+          <label><input type="checkbox"> 2SRT</label>
+        </div>
+      </div>
+
+      <button class="btn">Criar Curso</button>
+
+    </div>
+
+  </div>
+
+  <!-- ================= LISTA ================= -->
+  <div id="lista" class="tab-content hidden">
+
+    <!-- 🔍 FILTROS -->
+    <div class="admin-filters advanced">
+
+      <input type="text" placeholder="🔍 Buscar curso...">
+
+      <select>
+        <option value="">Curso (todos)</option>
+        <option>SIT</option>
+        <option>SAT</option>
+        <option>SRT</option>
+      </select>
+
+      <select>
+        <option value="">Turma</option>
+        <option>1SIT</option>
+        <option>2SIT</option>
+        <option>3SIT</option>
+        <option>1SAT</option>
+        <option>2SAT</option>
+      </select>
+
+      <select>
+        <option value="">Ano</option>
+        <option>2023</option>
+        <option>2024</option>
+        <option>2025</option>
+      </select>
+
+      <button class="btn">Filtrar</button>
+      <button class="btn ghost">Limpar</button>
+
+    </div>
+
+    <!-- GRID -->
+    <div class="courses-admin-grid">
+
+      <!-- CARD -->
+      <div class="course-admin-card">
+
+        <img src="https://via.placeholder.com/300x150">
+
+        <div class="content">
+
+          <h3>Lógica de Programação</h3>
+          <p>Fundamentos da programação e algoritmos</p>
+
+          <div class="info">
+            <span>40h</span>
+            <span>75% conclusão</span>
+          </div>
+
+          <div class="tags">
+            <span>1SIT</span>
+            <span>2SIT</span>
+          </div>
+
+          <div class="actions">
+            <button class="btn">Editar</button>
+            <button class="btn danger">Remover</button>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- CARD -->
+      <div class="course-admin-card">
+
+        <img src="https://via.placeholder.com/300x150">
+
+        <div class="content">
+
+          <h3>HTML e CSS</h3>
+          <p>Criação de sites modernos</p>
+
+          <div class="info">
+            <span>60h</span>
+            <span>82% conclusão</span>
+          </div>
+
+          <div class="tags">
+            <span>Todos</span>
+          </div>
+
+          <div class="actions">
+            <button class="btn">Editar</button>
+            <button class="btn danger">Remover</button>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

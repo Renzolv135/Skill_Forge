@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Cursos</title>
+  <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/aluno.css">
+    <link rel="stylesheet" href="css/curso-al.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="logo">⚡ SkillForge</div>
+
+  <div class="nav-links">
+    <a href="dashboard.html">Início</a>
+    <a class="active">Cursos</a>
+    <a href="perfil.html">Perfil</a>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1>Cursos Disponíveis</h1>
+    <p>Explore cursos do seu eixo e cursos gerais</p>
+  </div>
+
+  <!-- GRID -->
+  <div class="courses-grid">
+
+    <!-- CURSO 1 -->
+    <div class="course-card">
+      <img src="https://via.placeholder.com/300x160">
+
+      <div class="course-content">
+
+        <span class="course-tag">SIT</span>
+
+        <h3 class="course-title">Lógica de Programação</h3>
+
+        <p class="course-desc">
+          Aprenda os fundamentos da lógica e algoritmos.
+        </p>
+
+        <div class="rating">
+          ⭐⭐⭐⭐⭐ <span>(4.8)</span>
+        </div>
+
+        <button class="btn" onclick="abrirModal(
+          'Lógica de Programação',
+          'Aprenda lógica de programação do zero com exercícios práticos e desafios.',
+          '⭐⭐⭐⭐⭐ (4.8)',
+          '40h de curso',
+          'https://via.placeholder.com/500x250'
+        )">Saber mais</button>
+
+      </div>
+    </div>
+
+    <!-- CURSO 2 -->
+    <div class="course-card">
+      <img src="https://via.placeholder.com/300x160">
+
+      <div class="course-content">
+
+        <span class="course-tag geral">GERAL</span>
+
+        <h3 class="course-title">HTML e CSS</h3>
+
+        <p class="course-desc">
+          Crie páginas web modernas e responsivas.
+        </p>
+
+        <div class="rating">
+          ⭐⭐⭐⭐☆ <span>(4.5)</span>
+        </div>
+
+        <button class="btn" onclick="abrirModal(
+          'HTML e CSS',
+          'Aprenda a construir sites do zero com HTML5 e CSS3 moderno.',
+          '⭐⭐⭐⭐ (4.5)',
+          '60h de curso',
+          'https://via.placeholder.com/500x250'
+        )">Saber mais</button>
+
+      </div>
+    </div>
+
+    <!-- CURSO 3 -->
+    <div class="course-card">
+      <img src="https://via.placeholder.com/300x160">
+
+      <div class="course-content">
+
+        <span class="course-tag">SIT</span>
+
+        <h3 class="course-title">JavaScript</h3>
+
+        <p class="course-desc">
+          Torne seus sites interativos com JS.
+        </p>
+
+        <div class="rating">
+          ⭐⭐⭐⭐⭐ <span>(4.9)</span>
+        </div>
+
+        <button class="btn" onclick="abrirModal(
+          'JavaScript',
+          'Domine JavaScript e crie aplicações interativas e dinâmicas.',
+          '⭐⭐⭐⭐⭐ (4.9)',
+          '80h de curso',
+          'https://via.placeholder.com/500x250'
+        )">Saber mais</button>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- MODAL -->
+<div id="modal" class="modal hidden">
+
+  <div class="modal-content">
+
+    <span class="close" onclick="fecharModal()">✖</span>
+
+    <img id="modal-img" src="">
+
+    <h2 id="modal-title"></h2>
+
+    <p id="modal-desc"></p>
+
+    <div class="modal-info">
+      <span id="modal-rating"></span>
+      <span id="modal-hours"></span>
+    </div>
+
+    <button class="btn">Iniciar curso</button>
+
+  </div>
+
+</div>
+
+<!-- SCRIPT -->
+<script src="js/main.js">
+function abrirModal(titulo, desc, rating, horas, imagem) {
+
+  document.getElementById("modal-title").innerText = titulo;
+  document.getElementById("modal-desc").innerText = desc;
+  document.getElementById("modal-rating").innerText = rating;
+  document.getElementById("modal-hours").innerText = horas;
+  document.getElementById("modal-img").src = imagem;
+
+  document.getElementById("modal").classList.remove("hidden");
+}
+
+function fecharModal() {
+  document.getElementById("modal").classList.add("hidden");
+}
+</script>
+
+</body>
+</html>

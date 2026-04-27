@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/aluno.css">
+  <link rel="stylesheet" href="css/dash-al.css">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="logo">⚡ SkillForge</div>
+
+  <div class="nav-links">
+    <a class="active">Início</a>
+    <a href="cursos.html">Cursos</a>
+    <a href="perfil.html">Perfil</a>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1>Sistemas para Internet</h1>
+    <p>Turma: 2SIT</p>
+  </div>
+
+  <!-- GRID -->
+  <div class="top-grid">
+
+    <!-- CARD GRANDE -->
+    <div class="big-card">
+
+      <div class="big-top">
+        <span>Progresso Geral</span>
+        <strong>50%</strong>
+      </div>
+
+      <div class="progress-bar">
+        <div class="progress-fill"></div>
+      </div>
+
+      <div class="big-info">
+        <div>
+          <span>Cursos</span>
+          <h3>3/4</h3>
+        </div>
+
+        <div>
+          <span>Pontos</span>
+          <h3>8700</h3>
+        </div>
+
+        <div>
+          <span>Ranking</span>
+          <h3>#5</h3>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CARD LATERAL -->
+    <div class="side-card">
+      <span>Curso</span>
+      <h2>2SIT</h2>
+      <p>Sistemas para Internet</p>
+    </div>
+
+  </div>
+
+  <!-- TABS -->
+  <div class="tabs">
+    <div class="tab active" onclick="trocarTab(event,'cursos')">Cursos iniciados</div>
+    <div class="tab" onclick="trocarTab(event,'ranking')">Ranking</div>
+    <div class="tab" onclick="trocarTab(event,'certificados')">Certificados</div>
+  </div>
+
+  <!-- CURSOS -->
+  <div id="cursos" class="tab-content fade-in">
+
+    <div class="course premium">
+
+      <div class="course-left">
+        <img src="https://via.placeholder.com/60">
+
+        <div>
+          <div class="course-title">Lógica de Programação</div>
+          <div class="course-desc">40h • 20 aulas</div>
+
+          <div class="mini-bar">
+            <div class="mini-fill" style="width:70%"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="course-right">
+        <span class="badge andamento">Em andamento</span>
+        <button class="btn">Continuar</button>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- RANKING -->
+  <div id="ranking" class="tab-content hidden">
+
+    <div class="ranking-item top1">
+      🥇 João
+      <span>9500 pts</span>
+    </div>
+
+    <div class="ranking-item top2">
+      🥈 Maria
+      <span>9000 pts</span>
+    </div>
+
+    <div class="ranking-item you">
+      👤 Você (#5)
+      <span>8700 pts</span>
+    </div>
+
+  </div>
+
+  <!-- CERTIFICADOS -->
+  <div id="certificados" class="tab-content hidden">
+
+    <div class="certificate">
+      <div>
+        <div class="course-title">HTML e CSS</div>
+        <div class="course-desc">Emitido em 2024</div>
+      </div>
+
+      <span class="badge validado">✔ Validado</span>
+    </div>
+
+    <div class="certificate">
+      <div>
+        <div class="course-title">JavaScript</div>
+        <div class="course-desc">Aguardando validação</div>
+      </div>
+
+      <span class="badge pendente">⏳ Pendente</span>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
