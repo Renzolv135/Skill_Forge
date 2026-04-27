@@ -1,0 +1,38 @@
+/* =========================
+   ADMIN GERAL
+========================= */
+
+/* DASHBOARD */
+.admin-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* FILTROS */
+.admin-filters {
+  display: flex;
+  gap: 15px;
+}
+
+/* TABELA */
+.table-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr 1fr auto;
+}
+
+/* DETALHE ALUNO */
+.admin-student-hero {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* CURSOS ADMIN */
+.course-admin-card {
+  border-radius: 16px;
+}
+
+/* CERTIFICADOS */
+.cert-card {
+  padding: 18px;
+}

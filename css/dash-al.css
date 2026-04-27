@@ -1,0 +1,288 @@
+/* =========================
+   DASHBOARD ALUNO - PROFISSIONAL
+========================= */
+
+/* GRID */
+.top-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+/* =========================
+   CARD PRINCIPAL
+========================= */
+.big-card {
+  background: linear-gradient(135deg, rgba(34,197,94,0.08), rgba(255,255,255,0.02));
+  padding: 25px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+/* glow */
+.big-card::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: #22c55e;
+  filter: blur(120px);
+  opacity: 0.15;
+  top: -50px;
+  right: -50px;
+}
+
+.big-card:hover {
+  transform: translateY(-5px);
+}
+
+/* topo */
+.big-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+/* progresso */
+.progress-bar {
+  height: 14px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 20px;
+  margin-top: 15px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 50%;
+  background: linear-gradient(90deg, #22c55e, #4ade80);
+  border-radius: 20px;
+  box-shadow: 0 0 10px #22c55e;
+}
+
+/* info */
+.big-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.big-info div {
+  text-align: center;
+}
+
+.big-info span {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.big-info h3 {
+  margin: 5px 0 0;
+}
+
+/* =========================
+   CARD LATERAL
+========================= */
+.side-card {
+  background: rgba(255,255,255,0.02);
+  padding: 25px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: 0.3s;
+}
+
+.side-card:hover {
+  transform: translateY(-5px);
+}
+
+.side-card span {
+  color: #64748b;
+  font-size: 13px;
+}
+
+/* =========================
+   TABS
+========================= */
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-top: 35px;
+  background: rgba(255,255,255,0.03);
+  padding: 5px;
+  border-radius: 12px;
+  width: fit-content;
+}
+
+.tab {
+  padding: 8px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #94a3b8;
+  transition: 0.25s;
+}
+
+.tab:hover {
+  color: white;
+}
+
+.tab.active {
+  background: linear-gradient(90deg, #22c55e, #4ade80);
+  color: black;
+  font-weight: 500;
+}
+
+/* =========================
+   CURSOS (MELHORADO)
+========================= */
+.course {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px;
+  margin-top: 15px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.04);
+  transition: 0.3s;
+}
+
+.course:hover {
+  transform: translateY(-4px);
+  border: 1px solid rgba(34,197,94,0.3);
+}
+
+/* estilo premium */
+.course.premium {
+  background: linear-gradient(135deg, rgba(34,197,94,0.08), rgba(255,255,255,0.02));
+}
+
+.course-left {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.course img {
+  width: 60px;
+  border-radius: 12px;
+}
+
+.course-title {
+  font-weight: 500;
+}
+
+.course-desc {
+  font-size: 12px;
+  color: #64748b;
+}
+
+/* barra pequena */
+.mini-bar {
+  height: 6px;
+  width: 140px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 10px;
+  margin-top: 8px;
+}
+
+.mini-fill {
+  height: 100%;
+  background: #22c55e;
+  border-radius: 10px;
+}
+
+/* direita */
+.course-right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+/* botão mais bonito */
+.btn {
+  background: linear-gradient(90deg, #22c55e, #4ade80);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(34,197,94,0.3);
+}
+
+/* =========================
+   RANKING
+========================= */
+.ranking-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  border-radius: 14px;
+  margin-top: 12px;
+  transition: 0.25s;
+}
+
+.ranking-item:hover {
+  transform: translateY(-3px);
+}
+
+.top1 {
+  background: linear-gradient(90deg, #facc15, #eab308);
+  color: black;
+}
+
+.top2 {
+  background: linear-gradient(90deg, #cbd5f5, #94a3b8);
+}
+
+.you {
+  border: 1px solid #22c55e;
+}
+
+/* =========================
+   CERTIFICADOS
+========================= */
+.certificate {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px;
+  border-radius: 16px;
+  margin-top: 12px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.04);
+  transition: 0.25s;
+}
+
+.certificate:hover {
+  transform: translateY(-3px);
+}
+
+/* BADGES MELHORADOS */
+.badge {
+  font-size: 11px;
+  padding: 5px 12px;
+  border-radius: 20px;
+}
+
+.validado {
+  background: rgba(34,197,94,0.2);
+  color: #22c55e;
+}
+
+.pendente {
+  background: rgba(249,115,22,0.2);
+  color: #f97316;
+}
+
+.andamento {
+  background: rgba(34,197,94,0.2);
+  color: #22c55e;
+}

@@ -1,0 +1,198 @@
+
+/* =========================
+   GRID DE CURSOS
+========================= */
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+/* =========================
+   CARD DO CURSO
+========================= */
+.course-card {
+  background: rgba(255,255,255,0.02);
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: 0.35s;
+  position: relative;
+}
+
+/* HOVER FORTE */
+.course-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  border: 1px solid rgba(34,197,94,0.4);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+}
+
+/* =========================
+   IMAGEM + OVERLAY
+========================= */
+.course-card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+/* efeito zoom */
+.course-card:hover img {
+  transform: scale(1.08);
+}
+
+/* overlay escuro */
+.course-card::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 170px;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to top, rgba(2,6,23,0.8), transparent);
+}
+
+/* =========================
+   CONTEÚDO
+========================= */
+.course-content {
+  padding: 18px;
+  position: relative;
+  z-index: 2;
+}
+
+/* TAG */
+.course-tag {
+  font-size: 11px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  background: rgba(34,197,94,0.2);
+  color: #22c55e;
+  font-weight: 500;
+}
+
+.course-tag.geral {
+  background: rgba(249,115,22,0.2);
+  color: #f97316;
+}
+
+/* TITULO */
+.course-title {
+  margin: 12px 0 5px;
+  font-size: 18px;
+}
+
+/* DESC */
+.course-desc {
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+/* RATING */
+.rating {
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.rating span {
+  font-size: 12px;
+  color: #64748b;
+}
+
+/* BOTÃO */
+.course-card .btn {
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+/* =========================
+   MODAL MELHORADO
+========================= */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(2,6,23,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+/* ATIVO */
+.modal:not(.hidden) {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* CAIXA */
+.modal-content {
+  width: 420px;
+  background: #020617;
+  padding: 25px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.05);
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+  position: relative;
+}
+
+/* IMAGEM */
+.modal-content img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+/* TITULO */
+.modal-content h2 {
+  margin-bottom: 10px;
+}
+
+/* DESC */
+.modal-content p {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+/* INFO */
+.modal-info {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* BOTÃO FECHAR */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #94a3b8;
+  transition: 0.2s;
+}
+
+.close:hover {
+  color: white;
+}
+
+/* BOTÃO PRINCIPAL */
+.modal-content .btn {
+  width: 100%;
+  margin-top: 10px;
+  font-weight: 600;
+}

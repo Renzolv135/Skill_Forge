@@ -1,0 +1,313 @@
+/* =========================
+   HERO PERFIL
+========================= */
+.profile-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  border-radius: 20px;
+
+  background: linear-gradient(135deg, rgba(34,197,94,0.12), rgba(2,6,23,0.9));
+  border: 1px solid rgba(255,255,255,0.05);
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* glow no fundo */
+.profile-hero::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: #22c55e;
+  filter: blur(120px);
+  opacity: 0.15;
+  top: -50px;
+  left: -50px;
+}
+
+/* lado esquerdo */
+.hero-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  z-index: 2;
+}
+
+/* avatar */
+.avatar-big {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 3px solid #22c55e;
+  box-shadow: 0 0 20px rgba(34,197,94,0.4);
+}
+
+/* nome */
+.hero-left h2 {
+  margin: 0;
+}
+
+/* subtitulo */
+.hero-left p {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+/* nível */
+.level {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #22c55e;
+  font-weight: 500;
+}
+
+/* =========================
+   STATS DIREITA
+========================= */
+.hero-stats {
+  display: flex;
+  gap: 40px;
+  z-index: 2;
+}
+
+.hero-stats div {
+  text-align: center;
+}
+
+.hero-stats span {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.hero-stats h3 {
+  margin-top: 5px;
+  font-size: 20px;
+}
+
+/* destaque ranking */
+.hero-stats h3 {
+  color: #e5e7eb;
+}
+
+/* =========================
+   PROGRESSO
+========================= */
+.profile-progress {
+  margin-top: 30px;
+  padding: 25px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.progress-header span {
+  color: #94a3b8;
+}
+
+.progress-bar.big {
+  height: 14px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #22c55e, #4ade80);
+  border-radius: 20px;
+  transition: width 0.4s ease;
+}
+
+/* =========================
+   TABS
+========================= */
+.tabs {
+  display: flex;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.tab {
+  padding: 10px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  color: #94a3b8;
+}
+
+.tab:hover {
+  background: rgba(255,255,255,0.05);
+}
+
+.tab.active {
+  background: linear-gradient(90deg, rgba(249,115,22,0.2), rgba(249,115,22,0.1));
+  color: #f97316;
+}
+
+/* =========================
+   CURSOS AVANÇADOS
+========================= */
+.course-card-advanced {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 18px;
+  padding: 20px;
+
+  border-radius: 16px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.05);
+
+  transition: 0.3s;
+}
+
+/* hover premium */
+.course-card-advanced:hover {
+  transform: translateY(-5px);
+  border: 1px solid rgba(34,197,94,0.3);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* esquerda */
+.course-card-advanced .left {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+/* imagem */
+.course-card-advanced img {
+  width: 65px;
+  border-radius: 12px;
+}
+
+/* texto */
+.course-card-advanced h3 {
+  margin: 0;
+}
+
+.course-card-advanced p {
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+/* barra */
+.mini-bar {
+  height: 6px;
+  width: 140px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 10px;
+  margin-top: 8px;
+}
+
+.mini-fill {
+  height: 100%;
+  background: #22c55e;
+  border-radius: 10px;
+}
+
+/* direita */
+.course-card-advanced .right {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-end;
+}
+
+/* pontos */
+.points {
+  font-size: 12px;
+  color: #22c55e;
+  font-weight: 500;
+}
+
+/* =========================
+   CERTIFICADOS
+========================= */
+.certificate-advanced {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 18px;
+  padding: 20px;
+
+  border-radius: 16px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.05);
+
+  transition: 0.3s;
+}
+
+.certificate-advanced:hover {
+  transform: translateY(-5px);
+  border: 1px solid rgba(34,197,94,0.3);
+}
+
+/* esquerda */
+.cert-left h3 {
+  margin: 0;
+}
+
+.cert-left p {
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+/* direita */
+.cert-right {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* =========================
+   BADGES
+========================= */
+.badge {
+  font-size: 11px;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.validado {
+  background: rgba(34,197,94,0.2);
+  color: #22c55e;
+}
+
+.andamento {
+  background: rgba(59,130,246,0.2);
+  color: #3b82f6;
+}
+
+.pendente {
+  background: rgba(249,115,22,0.2);
+  color: #f97316;
+}
+
+/* =========================
+   BOTÕES
+========================= */
+.btn {
+  background: linear-gradient(90deg, #22c55e, #4ade80);
+  border: none;
+  padding: 8px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-weight: 500;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
