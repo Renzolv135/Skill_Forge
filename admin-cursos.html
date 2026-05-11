@@ -14,10 +14,12 @@
   <div class="logo">⚡ SkillForge Admin</div>
 
   <div class="nav-links">
-    <a href="admin-dashboard.html">Dashboard</a>
+     <a href="admin-dashboard.html">Inicio</a>
+    <a href="dash-admin.html">Dashboard</a>
     <a href="admin-alunos.html">Alunos</a>
     <a class="active">Cursos</a>
     <a href="./admin-certificados.html">Certificados</a>
+    <a href="./rank-ad.html">Ranking</a>
   </div>
 </div>
 
@@ -28,13 +30,13 @@
     <p>Crie e gerencie os cursos</p>
   </div>
 
-  <!-- TABS -->
+ 
   <div class="tabs">
     <div class="tab active" onclick="trocarTab(event,'criar')">Criar Curso</div>
     <div class="tab" onclick="trocarTab(event,'lista')">Cursos Disponíveis</div>
   </div>
 
-  <!-- ================= CRIAR ================= -->
+  
   <div id="criar" class="tab-content fade-in">
 
     <div class="form-curso">
@@ -53,7 +55,7 @@
         <input type="text" placeholder="URL da imagem">
       </div>
 
-      <!-- CURSO BASE -->
+     
       <div class="turmas-box">
         <h4>Curso (Eixo)</h4>
 
@@ -65,7 +67,7 @@
         </div>
       </div>
 
-      <!-- TURMAS ESPECÍFICAS -->
+     
       <div class="turmas-box">
         <h4>Turmas específicas</h4>
 
@@ -91,10 +93,10 @@
 
   </div>
 
-  <!-- ================= LISTA ================= -->
+  
   <div id="lista" class="tab-content hidden">
 
-    <!-- 🔍 FILTROS -->
+    
     <div class="admin-filters advanced">
 
       <input type="text" placeholder="🔍 Buscar curso...">
@@ -127,10 +129,10 @@
 
     </div>
 
-    <!-- GRID -->
+    
     <div class="courses-admin-grid">
 
-      <!-- CARD -->
+      
       <div class="course-admin-card">
 
         <img src="https://via.placeholder.com/300x150">
@@ -159,7 +161,7 @@
 
       </div>
 
-      <!-- CARD -->
+      
       <div class="course-admin-card">
 
         <img src="https://via.placeholder.com/300x150">

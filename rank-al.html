@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Ranking</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/aluno.css">
+  <link rel="stylesheet" href="css/rank-al.css">
+</head>
+
+<body>
+
+
+<div class="navbar">
+  <div class="logo">⚡ SkillForge</div>
+
+  <div class="nav-links">
+    <a href="dashboard.html">Início</a>
+    <a href="cursos.html">Cursos</a>
+    <a class="active">Ranking</a>
+    <a href="perfil.html">Perfil</a>
+  </div>
+</div>
+
+<div class="container">
+
+  
+  <div class="header">
+    <h1>Ranking</h1>
+    <p>Veja sua posição em diferentes níveis</p>
+  </div>
+
+  
+  <div class="ranking-summary">
+
+    <div class="summary-card">
+      <span>Turma</span>
+      <h2>#5</h2>
+      <p>2SIT</p>
+    </div>
+
+    <div class="summary-card">
+      <span>Curso</span>
+      <h2>#3</h2>
+      <p>Lógica de Programação</p>
+    </div>
+
+    <div class="summary-card">
+      <span>Geral</span>
+      <h2>#18</h2>
+      <p>Todos os alunos</p>
+    </div>
+
+  </div>
+
+  
+  <div class="tabs">
+    <div class="tab active" onclick="trocarTab(event,'turma')">Turma</div>
+    <div class="tab" onclick="trocarTab(event,'curso')">Curso</div>
+    <div class="tab" onclick="trocarTab(event,'geral')">Geral</div>
+  </div>
+
+  <div id="turma" class="tab-content fade-in">
+
+    <div class="ranking-item top1">
+      🥇 João
+      <span>9500 pts</span>
+    </div>
+
+    <div class="ranking-item top2">
+      🥈 Maria
+      <span>9000 pts</span>
+    </div>
+
+    <div class="ranking-item you">
+      👤 Você (#5)
+      <span>8700 pts</span>
+    </div>
+
+  </div>
+
+  <div id="curso" class="tab-content hidden">
+
+    <div class="ranking-item top1">
+      🥇 Lucas
+      <span>1200 pts</span>
+    </div>
+
+    <div class="ranking-item top2">
+      🥈 Ana
+      <span>1100 pts</span>
+    </div>
+
+    <div class="ranking-item you">
+      👤 Você (#3)
+      <span>1050 pts</span>
+    </div>
+
+  </div>
+
+  <div id="geral" class="tab-content hidden">
+
+    <div class="ranking-item top1">
+      🥇 João
+      <span>15000 pts</span>
+    </div>
+
+    <div class="ranking-item top2">
+      🥈 Maria
+      <span>14200 pts</span>
+    </div>
+
+    <div class="ranking-item you">
+      👤 Você (#18)
+      <span>8700 pts</span>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
