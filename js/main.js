@@ -1,6 +1,4 @@
-/* =========================
-   DASHBOARD (TABS)
-========================= */
+/* Dashboard*/
 function trocarTab(event, tab) {
 
   document.querySelectorAll(".tab").forEach(t => {
@@ -22,9 +20,7 @@ function trocarTab(event, tab) {
   }, 50);
 }
 
-/* =========================
-   MODAL (CURSOS)
-========================= */
+/* cursos */
 function abrirModal(titulo, desc, rating, horas, imagem) {
 
   document.getElementById("modal-title").innerText = titulo;
@@ -40,9 +36,7 @@ function fecharModal() {
   document.getElementById("modal").classList.remove("active"); // 🔥 corrigido
 }
 
-/* =========================
-   FECHAR CLICANDO FORA
-========================= */
+/* fechar*/
 window.onclick = function(event) {
   const modal = document.getElementById("modal");
 
@@ -51,9 +45,7 @@ window.onclick = function(event) {
   }
 }
 
-/* =========================
-   LOGIN TIPO DE USUÁRIO
-========================= */
+/* login por tipo */
 
 let tipoConta = "aluno";
 
@@ -70,7 +62,6 @@ function selectType(tipo, element) {
 /* LOGIN */
 function login() {
 
-  // 🔥 SIMULA LOGIN (depois você faz backend)
   if (tipoConta === "admin") {
     window.location.href = "admin-dashboard.html";
   } else {
@@ -79,7 +70,7 @@ function login() {
 
 }
 
-/* APROVAR */
+/* Aprova */
 function aprovarCert(btn) {
   const card = btn.closest(".cert-card");
   const badge = card.querySelector(".badge");
@@ -88,7 +79,7 @@ function aprovarCert(btn) {
   badge.className = "badge validado";
 }
 
-/* RECUSAR */
+/* Recusa */
 function recusarCert(btn) {
   const card = btn.closest(".cert-card");
   const badge = card.querySelector(".badge");
