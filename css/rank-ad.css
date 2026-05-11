@@ -1,0 +1,150 @@
+/* =========================
+   FILTRO
+========================= */
+.admin-filters {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+.admin-filters select {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: rgba(255,255,255,0.05);
+  color: #e5e7eb;
+  transition: 0.2s;
+}
+
+.admin-filters select:focus {
+  border: 1px solid #22c55e;
+  background: rgba(255,255,255,0.08);
+}
+
+/* =========================
+   TOP 3
+========================= */
+.ranking-top {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+/* CARD BASE */
+.rank-card {
+  width: 180px;
+  padding: 20px;
+  border-radius: 16px;
+  text-align: center;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: 0.3s;
+}
+
+.rank-card:hover {
+  transform: translateY(-6px);
+}
+
+/* POSIÇÕES */
+.rank-card.first {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #facc15, #eab308);
+  color: black;
+  font-weight: 600;
+}
+
+.rank-card.second {
+  background: linear-gradient(135deg, #cbd5f5, #94a3b8);
+  color: black;
+}
+
+.rank-card.third {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: black;
+}
+
+/* TEXTO */
+.rank-card h3 {
+  margin: 10px 0 5px;
+}
+
+.rank-card span {
+  font-size: 14px;
+}
+
+/* =========================
+   LISTA RANKING
+========================= */
+.ranking-list {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ITEM */
+.ranking-item {
+  display: grid;
+  grid-template-columns: 60px 2fr 1fr 1fr;
+  align-items: center;
+  padding: 15px 20px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: 0.25s;
+}
+
+.ranking-item:hover {
+  transform: translateY(-3px);
+  border: 1px solid rgba(34,197,94,0.3);
+}
+
+/* POSIÇÃO */
+.ranking-item span:first-child {
+  font-weight: 600;
+  color: #94a3b8;
+}
+
+/* STUDENT */
+.student {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.student img {
+  width: 40px;
+  border-radius: 50%;
+}
+
+/* PONTOS */
+.points {
+  color: #22c55e;
+  font-weight: 600;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+@media (max-width: 768px) {
+
+  .ranking-top {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .rank-card {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .ranking-item {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+}
